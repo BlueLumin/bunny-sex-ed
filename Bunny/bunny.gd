@@ -3,11 +3,13 @@ class_name Bunny extends CharacterBody2D
 enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP}
 
 @export var idle_timer: Timer
-@export var mating_timer: Timer
 @export var mating_area: Area2D
+@export var speed: float = 100.0
 
 var current_state: STATES = STATES.IDLE
 var current_mate: Bunny = null
+
+var direction: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
@@ -19,7 +21,13 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if current_state == STATES.MOVE_TOWARDS_MATE:
-		move_towards_mate(delta)
+		move_towards_mate()
+		
+	var target_velocity: Vector2 = direction * speed
+	
+	velocity = velocity.lerp(target_velocity, 1 - exp(-10 * delta))
+	
+	move_and_slide()
 
 
 # IDLE
@@ -43,23 +51,19 @@ func found_mate(mate: Bunny) -> void:
 	current_state = STATES.MOVE_TOWARDS_MATE
 
 
-func move_towards_mate(delta: float) -> void:
-	var direction: Vector2 = global_position.direction_to(current_mate.global_position).normalized()
-	var speed: float = 100.0
-	var target_velocity: Vector2 = direction * speed
-	
-	velocity = velocity.lerp(target_velocity, 1 - exp(-10 * delta))
-	move_and_slide()
+func move_towards_mate() -> void:
+	direction = global_position.direction_to(current_mate.global_position).normalized()
 
 
 # MATE
 func start_mating() -> void:
-	velocity = velocity.move_toward(Vector2.ZERO, get_physics_process_delta_time())
+	direction = Vector2.ZERO
 	current_state = STATES.MATE
 	set_visible(false)
+	BunnyManager.start_mating(global_position, self)
 
 
-func interupt_mating() -> void:
+func stop_mating() -> void:
 	set_visible(true)
 	enter_idle()
 

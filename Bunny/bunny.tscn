@@ -2,21 +2,19 @@
 
 [ext_resource type="Script" uid="uid://d4kgyvwi0pi3v" path="res://Bunny/bunny.gd" id="1_5aoni"]
 [ext_resource type="Script" uid="uid://cimyni7r03ehx" path="res://Bunny/drag_drop_component.gd" id="1_vp26t"]
-[ext_resource type="Texture2D" uid="uid://mfpgxgws4hdr" path="res://Bunny/Art/bunny.png" id="3_j87if"]
+[ext_resource type="Texture2D" uid="uid://mx76gxwyt0fy" path="res://Bunny/Art/frame0009.png" id="2_j87if"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j87if"]
-radius = 29.0172
+radius = 6.7082
 
-[node name="Bunny" type="CharacterBody2D" node_paths=PackedStringArray("idle_timer", "mating_timer", "mating_area") groups=["bunny"]]
+[node name="Bunny" type="CharacterBody2D" node_paths=PackedStringArray("idle_timer", "mating_area") groups=["bunny"]]
 script = ExtResource("1_5aoni")
 idle_timer = NodePath("IdleTimer")
-mating_timer = NodePath("MatingTimer")
 mating_area = NodePath("MatingArea")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-16, -13)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_j87if")
+scale = Vector2(2, 2)
+texture = ExtResource("2_j87if")
 
 [node name="DragDropComponent" type="Node2D" parent="."]
 script = ExtResource("1_vp26t")
@@ -24,9 +22,8 @@ script = ExtResource("1_vp26t")
 [node name="MatingArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MatingArea"]
+position = Vector2(2, 9)
 shape = SubResource("CircleShape2D_j87if")
 
 [node name="IdleTimer" type="Timer" parent="."]
 one_shot = true
-
-[node name="MatingTimer" type="Timer" parent="."]
