@@ -102,9 +102,10 @@ func _process(delta):
 	
 
 func _on_button_button_down() -> void:
-	dragging = true # Replace with function body.
-	offset = get_global_mouse_position() - global_position
-	print("button down******")
+	if current_state == STATES.FUCKED:
+		dragging = true # Replace with function body.
+		offset = get_global_mouse_position() - global_position
+		print("button down******")
 	
 func _on_button_button_up() -> void:
 	dragging = false # Replace with function body.
