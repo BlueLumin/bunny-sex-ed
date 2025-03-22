@@ -1,0 +1,92 @@
+[gd_scene load_steps=17 format=3 uid="uid://dnhn4x8ggscxh"]
+
+[ext_resource type="Texture2D" uid="uid://6w75x2trrsvv" path="res://ArtImport/humping animation transparent background/frame0000.png" id="1_ces6v"]
+[ext_resource type="Texture2D" uid="uid://bvj4svn7mgf4a" path="res://ArtImport/humping animation transparent background/frame0001.png" id="2_4luuy"]
+[ext_resource type="Texture2D" uid="uid://ceypwnmmaybap" path="res://ArtImport/humping animation transparent background/frame0002.png" id="3_83tbk"]
+[ext_resource type="Texture2D" uid="uid://c4e42u5lkf5oy" path="res://ArtImport/humping animation transparent background/frame0003.png" id="4_lyjd7"]
+[ext_resource type="Texture2D" uid="uid://4fb4356inb5x" path="res://ArtImport/humping animation transparent background/frame0004.png" id="5_udrk7"]
+[ext_resource type="Texture2D" uid="uid://jf0kkeyswnaq" path="res://ArtImport/humping animation transparent background/frame0005.png" id="6_6l4ql"]
+[ext_resource type="Texture2D" uid="uid://bmei1pdxnoblj" path="res://ArtImport/humping animation transparent background/frame0006.png" id="7_kxott"]
+[ext_resource type="Texture2D" uid="uid://b3a4154wcgbv8" path="res://ArtImport/humping animation transparent background/frame0007.png" id="8_p0djg"]
+[ext_resource type="Texture2D" uid="uid://dhrirq5t3ijpw" path="res://ArtImport/humping animation transparent background/frame0008.png" id="9_1kb5a"]
+[ext_resource type="Texture2D" uid="uid://c630701uldhan" path="res://ArtImport/humping animation transparent background/frame0009.png" id="10_vqnpp"]
+[ext_resource type="Texture2D" uid="uid://cbkqka0bbh7aj" path="res://ArtImport/humping animation transparent background/frame0010.png" id="11_x2vx2"]
+[ext_resource type="Texture2D" uid="uid://x3214j3h6o7p" path="res://ArtImport/humping animation transparent background/frame0011.png" id="12_27yq3"]
+[ext_resource type="Texture2D" uid="uid://b6wx1dabl2d2s" path="res://ArtImport/humping animation transparent background/frame0012.png" id="13_ppc1d"]
+[ext_resource type="AudioStream" uid="uid://jl7ura0u4hgp" path="res://AudioImport/LB_humping(loopable).mp3" id="14_6hlyc"]
+[ext_resource type="Script" uid="uid://dv6nj4ecw43ek" path="res://Austen's Hellhole/FuckingBunnies.gd" id="15_4luuy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4llak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ces6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4luuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_83tbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lyjd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_udrk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6l4ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kxott")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p0djg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1kb5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vqnpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x2vx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_27yq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ppc1d")
+}],
+"loop": true,
+"name": &"Fucking",
+"speed": 15.0
+}]
+
+[node name="FuckingBunnies" type="Node2D"]
+
+[node name="BunnyBody" type="CharacterBody2D" parent="."]
+
+[node name="AnimationsBunny" type="AnimatedSprite2D" parent="BunnyBody"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4llak")
+animation = &"Fucking"
+frame = 1
+frame_progress = 0.0294459
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_6hlyc")
+
+[node name="TestButtons" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="TestButtons" node_paths=PackedStringArray("_bunnyAnimations", "_fuckingAudio")]
+offset_left = -44.0
+offset_top = -6.0
+offset_right = 71.0
+offset_bottom = 26.0
+text = "PlayFucking"
+script = ExtResource("15_4luuy")
+_bunnyAnimations = NodePath("../../BunnyBody/AnimationsBunny")
+_fuckingAudio = NodePath("../../AudioStreamPlayer2D")
+
+[connection signal="pressed" from="TestButtons/Button" to="TestButtons/Button" method="_on_pressed"]
