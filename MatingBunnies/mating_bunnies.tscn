@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://lscs73bf60xl"]
+[gd_scene load_steps=27 format=4 uid="uid://lscs73bf60xl"]
 
 [ext_resource type="Script" uid="uid://1dnfqgqg70yi" path="res://MatingBunnies/mating_bunnies.gd" id="1_mehnd"]
 [ext_resource type="Texture2D" uid="uid://6w75x2trrsvv" path="res://ArtImport/humping animation transparent background/frame0000.png" id="2_ys2ex"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://x3214j3h6o7p" path="res://ArtImport/humping animation transparent background/frame0011.png" id="13_vxwbv"]
 [ext_resource type="Texture2D" uid="uid://b6wx1dabl2d2s" path="res://ArtImport/humping animation transparent background/frame0012.png" id="14_drvfh"]
 [ext_resource type="AudioStream" uid="uid://jl7ura0u4hgp" path="res://BunnyManager/LB_humping(loopable).mp3" id="15_ooykc"]
+[ext_resource type="AudioStream" uid="uid://c3thqqnb3ohg3" path="res://AudioImport/Interrupt/sfx_bunny_interupt1.mp3" id="16_duuf8"]
+[ext_resource type="AudioStream" uid="uid://0e7kfho3gbmu" path="res://AudioImport/Interrupt/sfx_bunny_interupt2.mp3" id="17_d8g2y"]
+[ext_resource type="AudioStream" uid="uid://cix1wud6mv3kc" path="res://AudioImport/Interrupt/sfx_bunny_interupt3.mp3" id="18_65l1k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4llak"]
 animations = [{
@@ -979,6 +982,12 @@ ProgressBar/fonts/font = SubResource("FontFile_ys2ex")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_k33d2")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_duuf8")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2o10t"]
+streams_count = 3
+stream_0/stream = ExtResource("16_duuf8")
+stream_1/stream = ExtResource("17_d8g2y")
+stream_2/stream = ExtResource("18_65l1k")
+
 [node name="MatingBunnies" type="Node2D" node_paths=PackedStringArray("interupt_area", "mating_timer")]
 y_sort_enabled = true
 script = ExtResource("1_mehnd")
@@ -1017,3 +1026,6 @@ show_percentage = false
 [node name="BunnyHumpAudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_ooykc")
 autoplay = true
+
+[node name="Interupt" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_2o10t")

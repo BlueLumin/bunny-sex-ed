@@ -1,6 +1,6 @@
 class_name Bunny extends CharacterBody2D
 
-enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP, FUCKED}
+enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP, FUCKED, SCHOOL}
 
 @export var idle_timer: Timer
 @export var fucked_cooldown_timer: Timer
@@ -12,12 +12,15 @@ var current_state: STATES = STATES.IDLE
 var current_mate: Bunny = null
 
 var direction: Vector2 = Vector2.ZERO
+var over_school: bool = false
 
 
 func _ready() -> void:
 	idle_timer.timeout.connect(enter_heat)
 	fucked_cooldown_timer.timeout.connect(_on_fucked_cooldown_timeout)
 	mating_area.area_entered.connect(_on_area_entered)
+	
+	mating_area.area_exited.connect(on_area_exited)
 	
 	enter_idle()
 
@@ -90,6 +93,10 @@ func picked_up() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.owner == current_mate:
 		start_mating()
+	
+	if area is School:
+		print("over area")
+		over_school = true
 
 
 var dragging = false
@@ -109,4 +116,20 @@ func _on_button_button_down() -> void:
 	
 func _on_button_button_up() -> void:
 	dragging = false # Replace with function body.
+	if over_school:
+		current_state = STATES.SCHOOL
+		animation.playLearning()
+		idle_timer.stop()
+		fucked_cooldown_timer.stop()
+		print("area")
 	print("button up******")
+
+
+func on_area_exited(area: Area2D) -> void:
+	if area is School:
+		print("exited area")
+		over_school = false
+
+
+func leave_school() -> void:
+	pass

@@ -523,7 +523,7 @@ bunny_spawn_audio_player = NodePath("Audio/BunnySpawnAudioPlayer")
 y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4llak")
-animation = &"Idle"
+animation = &"Learning"
 autoplay = "Idle"
 offset = Vector2(0, -23.8)
 

@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dywj8ge2bunyy"]
+[gd_scene load_steps=7 format=3 uid="uid://dywj8ge2bunyy"]
 
 [ext_resource type="Texture2D" uid="uid://cvm712ssw3wmn" path="res://ArtImport/Like_Rabbits.jpg" id="1_0xm2m"]
+[ext_resource type="AudioStream" uid="uid://75qoscccwq2c" path="res://AudioImport/Music/LB_track_1_Dmaj_130bpm(loopable).mp3" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://c18jehxym1auu" path="res://school.gd" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://23skf4b5omtl" path="res://Bunny/bunny.tscn" id="4_lquwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
 size = Vector2(1207, 1019)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(121.098, 249.839)
 
 [node name="Main" type="Node2D"]
 
@@ -77,3 +82,18 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea" groups=["spawn_area"]]
 position = Vector2(637.5, 527.5)
 shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h2yge")
+autoplay = true
+
+[node name="School" type="Area2D" parent="." groups=["school"]]
+script = ExtResource("4_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="School"]
+position = Vector2(1608.25, 271.837)
+scale = Vector2(5.00009, 2.03462)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="Marker2D" type="Marker2D" parent="School" groups=["marker"]]
+position = Vector2(1861, 1221)

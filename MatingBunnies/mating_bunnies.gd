@@ -9,6 +9,7 @@ var mating_progress: int = 0
 
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var bunny_hump_audio_player: AudioStreamPlayer = $BunnyHumpAudioPlayer
+@onready var interupt_audio: AudioStreamPlayer = $Interupt
 
 
 func _ready() -> void:
@@ -43,6 +44,8 @@ func interupt() -> void:
 		mating_progress -= 1
 		mating_timer.set_wait_time(BunnyManager.mating_time - mating_progress)
 		mating_timer.start()
+	
+	interupt_audio.play()
 
 
 func finish_mating() -> void:

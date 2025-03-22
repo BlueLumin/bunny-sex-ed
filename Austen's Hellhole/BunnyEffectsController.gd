@@ -42,7 +42,6 @@ func playDropped():
 
 
 func playInterrupt():
-	_bunnyAnimations.play("Interrupt")
 	bunny_inturrupt_audio_player.play()
 	
 
