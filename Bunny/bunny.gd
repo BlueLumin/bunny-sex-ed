@@ -2,9 +2,8 @@ class_name Bunny extends CharacterBody2D
 
 enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP}
 
-@export var cooldown_timer: Timer
-@export var min_cooldown_timer: float = 2.0
-@export var max_cooldown_timer: float = 4.0
+@export var idle_timer: Timer
+@export var mating_timer: Timer
 @export var mating_area: Area2D
 
 var current_state: STATES = STATES.IDLE
@@ -12,7 +11,7 @@ var current_mate: Bunny = null
 
 
 func _ready() -> void:
-	cooldown_timer.timeout.connect(enter_heat)
+	idle_timer.timeout.connect(enter_heat)
 	mating_area.area_entered.connect(_on_area_entered)
 	
 	enter_idle()
@@ -26,11 +25,12 @@ func _physics_process(delta: float) -> void:
 # IDLE
 func enter_idle() -> void:
 	current_state = STATES.IDLE
+	current_mate = null
 	
-	var cooldown_time: float = randf_range(min_cooldown_timer, max_cooldown_timer)
+	var cooldown_time: float = randf_range(BunnyManager.idle_time_range.x, BunnyManager.idle_time_range.y)
 	
-	cooldown_timer.set_wait_time(cooldown_time)
-	cooldown_timer.start()
+	idle_timer.set_wait_time(cooldown_time)
+	idle_timer.start()
 
 
 # HEAT
@@ -56,15 +56,17 @@ func move_towards_mate(delta: float) -> void:
 func start_mating() -> void:
 	velocity = velocity.move_toward(Vector2.ZERO, get_physics_process_delta_time())
 	current_state = STATES.MATE
+	set_visible(false)
 
 
-func mate_with_mate() -> void:
-	pass
+func interupt_mating() -> void:
+	set_visible(true)
+	enter_idle()
 
 
 # PICKED UP
 func picked_up() -> void:
-	pass
+	current_state = STATES.PICKED_UP
 
 
 # Signals

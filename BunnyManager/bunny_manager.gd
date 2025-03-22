@@ -1,5 +1,11 @@
 extends Node2D
 
+const BUNNY = preload("res://Bunny/bunny.tscn")
+
+@export var idle_time_range: Vector2 = Vector2(2.0, 10.0)
+@export var mating_time: float = 5.0
+@export var spawn_value_range: Vector2 = Vector2(2, 5)
+
 var bunnies: Array = []
 var bunnies_in_heat: Array[Bunny] = []
 
@@ -60,3 +66,14 @@ func pair_bunnies() -> void:
 		bunny_2.found_mate(bunny_1)
 		
 		print("Paired ", bunny_1.name, " & ", bunny_2.name)
+
+
+func spawn_bunnies(location: Vector2) -> void:
+	var number_of_spawns: int = randi_range(spawn_value_range.x, spawn_value_range.y)
+	
+	for n in number_of_spawns:
+		var bunny_instance: Bunny = BUNNY.instantiate()
+		var layer: Node2D = get_tree().get_first_node_in_group("actors")
+		
+		layer.add_child(bunny_instance)
+		bunny_instance.global_position = location

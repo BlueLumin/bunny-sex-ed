@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bofs75nfnbo6l"]
+[gd_scene load_steps=6 format=3 uid="uid://dywj8ge2bunyy"]
 
 [ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://ArtImport/Stolen Images/meadow.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://ArtImport/Stolen Images/exit.jpg" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://cycsmo6rxf2ik" path="res://Draggable.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" path="res://Draggable.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://23skf4b5omtl" path="res://Bunny/bunny.tscn" id="4_lquwl"]
 
 [node name="Main" type="Node2D"]
 
@@ -46,6 +47,74 @@ offset_bottom = 1029.0
 color = Color(0.192157, 0.192157, 0.192157, 0.698039)
 metadata/_edit_use_anchors_ = true
 
-[node name="-------Actors------" type="Node2D" parent="."]
+[node name="-------Actors------" type="Node2D" parent="." groups=["actors"]]
+
+[node name="Bunny" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(177, 180)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny2" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(385, 257)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny3" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(673, 189)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny4" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(613, 420)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny5" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(228, 457)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny6" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(436, 517)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny7" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(245, 660)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny8" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(465, 737)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny9" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(251, 880)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny10" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(613, 851)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny11" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(972, 797)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny12" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(849, 620)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny13" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(920, 392)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny14" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(1168, 218)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny15" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(1119, 511)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny16" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(1210, 797)
+scale = Vector2(0.4, 0.4)
+
+[node name="Bunny17" parent="-------Actors------" instance=ExtResource("4_lquwl")]
+position = Vector2(819, 908)
+scale = Vector2(0.4, 0.4)
 
 [node name="Draggable" parent="." instance=ExtResource("4_1bvp3")]
