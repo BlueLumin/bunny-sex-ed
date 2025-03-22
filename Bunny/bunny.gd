@@ -90,3 +90,22 @@ func picked_up() -> void:
 func _on_area_entered(area: Area2D) -> void:
 	if area.owner == current_mate:
 		start_mating()
+
+
+var dragging = false
+
+var offset = Vector2(0,0)
+
+func _process(delta):
+	if dragging:
+		position = get_global_mouse_position() - offset
+	
+
+func _on_button_button_down() -> void:
+	dragging = true # Replace with function body.
+	offset = get_global_mouse_position() - global_position
+	print("button down******")
+	
+func _on_button_button_up() -> void:
+	dragging = false # Replace with function body.
+	print("button up******")
