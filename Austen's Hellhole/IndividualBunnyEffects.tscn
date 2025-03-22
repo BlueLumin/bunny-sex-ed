@@ -1,25 +1,34 @@
-[gd_scene load_steps=91 format=3 uid="uid://b3712majr5yt8"]
+[gd_scene load_steps=100 format=3 uid="uid://b3712majr5yt8"]
 
 [ext_resource type="Script" uid="uid://3y55nkfwlgxh" path="res://Austen's Hellhole/BunnyEffectsController.gd" id="1_cq2ca"]
 [ext_resource type="Texture2D" uid="uid://cfhabt1w4el2e" path="res://ArtImport/BunnyIdle/frame0000.png" id="1_lhnme"]
+[ext_resource type="Texture2D" uid="uid://fwm3aqyswkyv" path="res://ArtImport/BunnyClicked/frame0000.png" id="2_oqj6y"]
 [ext_resource type="Texture2D" uid="uid://bfljkiras3tmv" path="res://ArtImport/post Coital glow/frame0000.png" id="2_qdjtq"]
 [ext_resource type="Texture2D" uid="uid://dpmcpis518e2c" path="res://ArtImport/BunnyIdle/frame0001.png" id="2_w3x3u"]
+[ext_resource type="Texture2D" uid="uid://ckr0w6mx3h7um" path="res://ArtImport/BunnyClicked/frame0001.png" id="3_ayy7s"]
 [ext_resource type="Texture2D" uid="uid://v213qaree8bw" path="res://ArtImport/BunnyIdle/frame0002.png" id="3_fha5x"]
 [ext_resource type="Texture2D" uid="uid://dbr4leqf6aegg" path="res://ArtImport/post Coital glow/frame0001.png" id="3_xu2nb"]
 [ext_resource type="Texture2D" uid="uid://c7drni0siafs6" path="res://ArtImport/BunnyIdle/frame0003.png" id="4_b828h"]
 [ext_resource type="Texture2D" uid="uid://boi4ioucx063s" path="res://ArtImport/post Coital glow/frame0002.png" id="4_gdim5"]
+[ext_resource type="Texture2D" uid="uid://cwol46k0kx6dw" path="res://ArtImport/BunnyClicked/frame0002.png" id="4_hy4qq"]
 [ext_resource type="Texture2D" uid="uid://b20a1ka61qbk2" path="res://ArtImport/BunnyIdle/frame0004.png" id="5_3wtbf"]
+[ext_resource type="Texture2D" uid="uid://bmk2uxwbou2q6" path="res://ArtImport/BunnyClicked/frame0003.png" id="5_duu2k"]
 [ext_resource type="Texture2D" uid="uid://b8mj8yfdhbse8" path="res://ArtImport/post Coital glow/frame0003.png" id="5_j4osx"]
+[ext_resource type="Texture2D" uid="uid://c1r0812o57dla" path="res://ArtImport/BunnyClicked/frame0004.png" id="6_bb2gj"]
 [ext_resource type="Texture2D" uid="uid://f65n8vuay176" path="res://ArtImport/post Coital glow/frame0004.png" id="6_dhy55"]
 [ext_resource type="Texture2D" uid="uid://c5s20ng87hx0e" path="res://ArtImport/BunnyIdle/frame0005.png" id="6_i2jm7"]
+[ext_resource type="Texture2D" uid="uid://k1ajutnitf3b" path="res://ArtImport/BunnyClicked/frame0005.png" id="7_2gaq8"]
 [ext_resource type="Texture2D" uid="uid://b1mm21nx6s3wu" path="res://ArtImport/post Coital glow/frame0005.png" id="7_7x7sf"]
 [ext_resource type="Texture2D" uid="uid://c5xfd15ln6v7u" path="res://ArtImport/BunnyIdle/frame0006.png" id="7_ka2d1"]
+[ext_resource type="Texture2D" uid="uid://b5grgq3vs7cp0" path="res://ArtImport/BunnyClicked/frame0006.png" id="8_480pl"]
 [ext_resource type="Texture2D" uid="uid://rdf7tl3p8ws1" path="res://ArtImport/post Coital glow/frame0006.png" id="8_b4xdb"]
 [ext_resource type="Texture2D" uid="uid://d02o4fskwxnar" path="res://ArtImport/BunnyIdle/frame0007.png" id="8_gmxvr"]
+[ext_resource type="Texture2D" uid="uid://cx83s6b6ykwb2" path="res://ArtImport/BunnyClicked/frame0007.png" id="9_38gvv"]
 [ext_resource type="Texture2D" uid="uid://3ywm2fbliejn" path="res://ArtImport/post Coital glow/frame0007.png" id="9_a18t1"]
 [ext_resource type="Texture2D" uid="uid://c84ctrwbyhnog" path="res://ArtImport/BunnyIdle/frame0008.png" id="9_cemlh"]
 [ext_resource type="Texture2D" uid="uid://dnqf05bal6s6y" path="res://ArtImport/post Coital glow/frame0008.png" id="10_23px5"]
 [ext_resource type="Texture2D" uid="uid://deoe5rtlgig4p" path="res://ArtImport/BunnyIdle/frame0009.png" id="10_kwa3e"]
+[ext_resource type="Texture2D" uid="uid://541qn77usbuw" path="res://ArtImport/BunnyClicked/frame0008.png" id="10_msbug"]
 [ext_resource type="Texture2D" uid="uid://pyehrjp5w501" path="res://ArtImport/post Coital glow/frame0009.png" id="11_t4pwb"]
 [ext_resource type="AudioStream" uid="uid://dhlgdiykmed3c" path="res://AudioImport/Spawn/sfx_bunny_spawn1.mp3" id="12_76pfk"]
 [ext_resource type="AudioStream" uid="uid://cxuqinnfvsvhj" path="res://AudioImport/BunnyClick/sfx_bunny_click1.mp3" id="12_dp5bi"]
@@ -92,6 +101,38 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4llak"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oqj6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ayy7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hy4qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_duu2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bb2gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2gaq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_480pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_38gvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_msbug")
+}],
+"loop": true,
+"name": &"Clicked",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_qdjtq")
@@ -390,11 +431,12 @@ _spawnAudio = [NodePath("../Audio/SpawnAudio/BunnySpawnAudio"), NodePath("../Aud
 _clickedAudio = [NodePath("../Audio/ClickAudio/BunnyClickAudio"), NodePath("../Audio/ClickAudio/BunnyClickAudio2"), NodePath("../Audio/ClickAudio/BunnyClickAudio3"), NodePath("../Audio/ClickAudio/BunnyClickAudio4"), NodePath("../Audio/ClickAudio/BunnyClickAudio5"), NodePath("../Audio/ClickAudio/BunnyClickAudio6"), NodePath("../Audio/ClickAudio/BunnyClickAudio7"), NodePath("../Audio/ClickAudio/BunnyClickAudio8"), NodePath("../Audio/ClickAudio/BunnyClickAudio9"), NodePath("../Audio/ClickAudio/BunnyClickAudio10"), NodePath("../Audio/ClickAudio/BunnyClickAudio11")]
 _droppedAudio = [NodePath("../Audio/DropAudio/BunnyDropAudio"), NodePath("../Audio/DropAudio/BunnyDropAudio2"), NodePath("../Audio/DropAudio/BunnyDropAudio3")]
 _interruptAudio = [NodePath("../Audio/Interrupt/BunnyInterruptAudio"), NodePath("../Audio/Interrupt/BunnyInterruptAudio2"), NodePath("../Audio/Interrupt/BunnyInterruptAudio3")]
+_heatColor = Color(0.890625, 0.229614, 0.57357, 1)
 
 [node name="AnimationsBunny" type="AnimatedSprite2D" parent="BunnyBody"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4llak")
-animation = &"Learning"
+animation = &"Clicked"
 
 [node name="Audio" type="Node" parent="."]
 

@@ -5,9 +5,11 @@ extends CharacterBody2D
 @export var _clickedAudio: Array[AudioStreamPlayer2D]
 @export var _droppedAudio: Array[AudioStreamPlayer2D]
 @export var _interruptAudio: Array[AudioStreamPlayer2D]
+@export var _heatColor: Color
 
 func playIdle():
 	_bunnyAnimations.play("Idle")
+	
 
 func playWalking():
 	_bunnyAnimations.play("Walking")
@@ -24,7 +26,7 @@ func playLearning():
 	_bunnyAnimations.play("Learning")
 
 func playClicked():
-	_bunnyAnimations.play("Idle")
+	_bunnyAnimations.play("Clicked")
 	playAudioAtRandomPitch(_clickedAudio[randi_range(0, _clickedAudio.size() - 1)], 0.9, 1.1)
 
 	
