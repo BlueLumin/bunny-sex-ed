@@ -3,6 +3,8 @@ class_name Bunny extends CharacterBody2D
 enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP}
 
 @export var idle_timer: Timer
+@export var fucked_cooldown_timer: Timer
+@export var animation: BunnyAnimation
 @export var mating_area: Area2D
 @export var speed: float = 100.0
 
@@ -14,6 +16,7 @@ var direction: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	idle_timer.timeout.connect(enter_heat)
+	fucked_cooldown_timer.timeout.connect(_on_fucked_cooldown_timeout)
 	mating_area.area_entered.connect(_on_area_entered)
 	
 	enter_idle()
@@ -33,6 +36,7 @@ func _physics_process(delta: float) -> void:
 # IDLE
 func enter_idle() -> void:
 	current_state = STATES.IDLE
+	animation.playIdle()
 	current_mate = null
 	
 	var cooldown_time: float = randf_range(BunnyManager.idle_time_range.x, BunnyManager.idle_time_range.y)
@@ -44,11 +48,13 @@ func enter_idle() -> void:
 # HEAT
 func enter_heat() -> void:
 	current_state = STATES.HEAT
+	animation.playWalking()
 
 
 func found_mate(mate: Bunny) -> void:
 	current_mate = mate
 	current_state = STATES.MOVE_TOWARDS_MATE
+	animation.playWalking()
 
 
 func move_towards_mate() -> void:
@@ -65,6 +71,12 @@ func start_mating() -> void:
 
 func stop_mating() -> void:
 	set_visible(true)
+	animation.playFucked()
+	fucked_cooldown_timer.set_wait_time(randf_range(BunnyManager.fucked_cooldown_range.x, BunnyManager.fucked_cooldown_range.y))
+	fucked_cooldown_timer.start()
+
+
+func _on_fucked_cooldown_timeout() -> void:
 	enter_idle()
 
 

@@ -6,6 +6,7 @@ const MATING_BUNNIES = preload("res://MatingBunnies/mating_bunnies.tscn")
 @export var idle_time_range: Vector2 = Vector2(2.0, 10.0)
 @export var mating_time: float = 5.0
 @export var spawn_value_range: Vector2 = Vector2(2, 5)
+@export var fucked_cooldown_range: Vector2 = Vector2(2.0, 5.0)
 
 var bunnies: Array = []
 var bunnies_in_heat: Array[Bunny] = []
@@ -97,3 +98,4 @@ func spawn_bunnies(location: Vector2) -> void:
 		layer.call_deferred("add_child", bunny_instance)
 		bunny_instance.global_position = location + Vector2(randf_range(-spawn_radius, spawn_radius), randf_range(-spawn_radius, spawn_radius))
 		bunnies.append(bunny_instance)
+		bunny_instance.animation.call_deferred("playSpawn")

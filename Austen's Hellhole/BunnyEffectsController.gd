@@ -1,4 +1,4 @@
-extends Node2D
+class_name BunnyAnimation extends Node2D
 
 @export var _bunnyAnimations: AnimatedSprite2D
 @export var bunny_click_audio_player: AudioStreamPlayer
