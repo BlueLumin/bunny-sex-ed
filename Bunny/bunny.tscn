@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://23skf4b5omtl"]
+
+[ext_resource type="Script" uid="uid://cimyni7r03ehx" path="res://drag_drop_component.gd" id="1_vp26t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3lx8c"]
+
+[node name="Bunny" type="Node2D"]
+
+[node name="BunnyAnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3lx8c")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_vp26t")
