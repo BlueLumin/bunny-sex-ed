@@ -44,3 +44,8 @@ func playInterrupt():
 	_bunnyAnimations.play("Interrupt")
 	bunny_inturrupt_audio_player.play()
 	
+
+
+func animation_finished() -> void:
+	if _bunnyAnimations.animation == "Spawn":
+		_bunnyAnimations.play("Idle")

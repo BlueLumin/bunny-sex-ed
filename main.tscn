@@ -1,53 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://dywj8ge2bunyy"]
+[gd_scene load_steps=4 format=3 uid="uid://dywj8ge2bunyy"]
 
-[ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://ArtImport/Stolen Images/meadow.jpg" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://ArtImport/Stolen Images/exit.jpg" id="3_lquwl"]
-[ext_resource type="PackedScene" path="res://Draggable.tscn" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cvm712ssw3wmn" path="res://ArtImport/Like_Rabbits.jpg" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://23skf4b5omtl" path="res://Bunny/bunny.tscn" id="4_lquwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(1207, 1019)
 
 [node name="Main" type="Node2D"]
 
 [node name="-------Environment------" type="Node2D" parent="."]
 
-[node name="BackgroundTemp" type="Node2D" parent="-------Environment------"]
-
-[node name="Dimensions" type="ColorRect" parent="-------Environment------/BackgroundTemp"]
-custom_minimum_size = Vector2(1920, 1080)
-offset_left = -8.0
-offset_top = 1.0
-offset_right = 1912.0
-offset_bottom = 1081.0
-mouse_filter = 2
-color = Color(0.561121, 0.176564, 0.346954, 0.611765)
-
-[node name="Meadow" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(707.5, 541)
-scale = Vector2(2.53369, 1.89007)
-texture = ExtResource("1_h2yge")
-
-[node name="School" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(1668, 276)
-scale = Vector2(0.646994, 0.666853)
-texture = ExtResource("2_1bvp3")
-
-[node name="Exit" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(1670, 807.718)
-rotation = 3.14159
-scale = Vector2(0.646994, 0.531628)
-texture = ExtResource("3_lquwl")
-
-[node name="CanvasGroup" type="CanvasGroup" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(204, 352)
-
-[node name="PlayableArea" type="ColorRect" parent="-------Environment------/BackgroundTemp"]
-offset_left = 43.0
-offset_top = 67.0
-offset_right = 1371.0
-offset_bottom = 1029.0
-mouse_filter = 2
-color = Color(0.192157, 0.192157, 0.192157, 0.698039)
-metadata/_edit_use_anchors_ = true
+[node name="Background" type="Sprite2D" parent="-------Environment------"]
+position = Vector2(960, 540)
+texture = ExtResource("1_0xm2m")
 
 [node name="-------Actors------" type="Node2D" parent="." groups=["actors"]]
 
@@ -102,8 +67,13 @@ position = Vector2(1210, 797)
 [node name="Bunny17" parent="-------Actors------" instance=ExtResource("4_lquwl")]
 position = Vector2(819, 908)
 
-[node name="Draggable" parent="." instance=ExtResource("4_1bvp3")]
-
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(951, 556)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(962, 541)
+
+[node name="SpawnArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnArea" groups=["spawn_area"]]
+position = Vector2(637.5, 527.5)
+shape = SubResource("RectangleShape2D_0xm2m")

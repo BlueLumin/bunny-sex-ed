@@ -1,6 +1,6 @@
 class_name Bunny extends CharacterBody2D
 
-enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP}
+enum STATES {IDLE, HEAT, MOVE_TOWARDS_MATE, MATE, PICKED_UP, FUCKED}
 
 @export var idle_timer: Timer
 @export var fucked_cooldown_timer: Timer
@@ -72,6 +72,7 @@ func start_mating() -> void:
 func stop_mating() -> void:
 	set_visible(true)
 	animation.playFucked()
+	current_state = STATES.FUCKED
 	fucked_cooldown_timer.set_wait_time(randf_range(BunnyManager.fucked_cooldown_range.x, BunnyManager.fucked_cooldown_range.y))
 	fucked_cooldown_timer.start()
 

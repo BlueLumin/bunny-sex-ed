@@ -29,6 +29,7 @@ window/size/viewport_height=1080
 bunny=""
 bunny_manager=""
 actors=""
+spawn_area=""
 
 [input]
 

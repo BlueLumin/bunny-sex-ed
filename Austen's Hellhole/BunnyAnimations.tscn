@@ -510,6 +510,7 @@ stream_2/stream = ExtResource("110_7qmy8")
 stream_3/stream = ExtResource("111_elvgj")
 
 [node name="BunnyAnimations" type="Node2D" node_paths=PackedStringArray("_bunnyAnimations", "bunny_click_audio_player", "bunny_drop_audio_player", "bunny_climax_audio_player", "bunny_inturrupt_audio_player", "bunny_spawn_audio_player")]
+y_sort_enabled = true
 script = ExtResource("1_unnbi")
 _bunnyAnimations = NodePath("AnimationsBunny")
 bunny_click_audio_player = NodePath("Audio/BunnyClickAudioPlayer")
@@ -519,6 +520,7 @@ bunny_inturrupt_audio_player = NodePath("Audio/BunnyInturruptAudioPlayer")
 bunny_spawn_audio_player = NodePath("Audio/BunnySpawnAudioPlayer")
 
 [node name="AnimationsBunny" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4llak")
 animation = &"Idle"
@@ -541,3 +543,5 @@ stream = SubResource("AudioStreamRandomizer_duu2k")
 
 [node name="BunnySpawnAudioPlayer" type="AudioStreamPlayer" parent="Audio"]
 stream = SubResource("AudioStreamRandomizer_bb2gj")
+
+[connection signal="animation_finished" from="AnimationsBunny" to="." method="animation_finished"]

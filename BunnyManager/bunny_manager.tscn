@@ -5,5 +5,4 @@
 [node name="BunnyManager" type="Node2D" groups=["bunny_manager"]]
 script = ExtResource("1_2kjb2")
 idle_time_range = Vector2(2, 15)
-mating_time = 10.0
 spawn_value_range = Vector2(1, 3)

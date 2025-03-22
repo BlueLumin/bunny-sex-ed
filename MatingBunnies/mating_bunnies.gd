@@ -8,6 +8,7 @@ var mouse_hovered: bool = false
 var mating_progress: int = 0
 
 @onready var progress_bar: ProgressBar = $ProgressBar
+@onready var bunny_hump_audio_player: AudioStreamPlayer = $BunnyHumpAudioPlayer
 
 
 func _ready() -> void:
@@ -50,6 +51,7 @@ func finish_mating() -> void:
 
 func deactivate() -> void:
 	set_visible(false)
+	bunny_hump_audio_player.stop()
 	
 	for bunny in original_bunnies:
 		bunny.stop_mating()

@@ -95,7 +95,11 @@ func spawn_bunnies(location: Vector2) -> void:
 		var bunny_instance: Bunny = BUNNY.instantiate()
 		var layer: Node2D = get_tree().get_first_node_in_group("actors")
 		
+		var spawn_x: float = randf_range(34, 1250)
+		var spawn_y: float = randf_range(23, 1000)
+		
+		
 		layer.call_deferred("add_child", bunny_instance)
-		bunny_instance.global_position = location + Vector2(randf_range(-spawn_radius, spawn_radius), randf_range(-spawn_radius, spawn_radius))
+		bunny_instance.global_position = Vector2(spawn_x, spawn_y)
 		bunnies.append(bunny_instance)
 		bunny_instance.animation.call_deferred("playSpawn")
