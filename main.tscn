@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bofs75nfnbo6l"]
+[gd_scene load_steps=5 format=3 uid="uid://bofs75nfnbo6l"]
 
-[ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://Stolen Images/meadow.jpg" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://Stolen Images/school.jpg" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://Stolen Images/exit.jpg" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://ArtImport/Stolen Images/meadow.jpg" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://ArtImport/Stolen Images/exit.jpg" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cycsmo6rxf2ik" path="res://Draggable.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node2D"]
 
@@ -12,35 +13,39 @@
 
 [node name="Dimensions" type="ColorRect" parent="-------Environment------/BackgroundTemp"]
 custom_minimum_size = Vector2(1920, 1080)
-offset_left = -212.0
-offset_top = -351.0
-offset_right = 1708.0
-offset_bottom = 729.0
+offset_left = -8.0
+offset_top = 1.0
+offset_right = 1912.0
+offset_bottom = 1081.0
 color = Color(0.561121, 0.176564, 0.346954, 0.611765)
 
 [node name="Meadow" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(503.5, 189)
+position = Vector2(707.5, 541)
 scale = Vector2(2.53369, 1.89007)
 texture = ExtResource("1_h2yge")
 
 [node name="School" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(1464, -76)
+position = Vector2(1668, 276)
 scale = Vector2(0.646994, 0.666853)
 texture = ExtResource("2_1bvp3")
 
 [node name="Exit" type="Sprite2D" parent="-------Environment------/BackgroundTemp"]
-position = Vector2(1466, 455.718)
+position = Vector2(1670, 807.718)
 rotation = 3.14159
 scale = Vector2(0.646994, 0.531628)
 texture = ExtResource("3_lquwl")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="-------Environment------/BackgroundTemp"]
+position = Vector2(204, 352)
 
 [node name="PlayableArea" type="ColorRect" parent="-------Environment------/BackgroundTemp"]
-offset_left = -161.0
-offset_top = -285.0
-offset_right = 1167.0
-offset_bottom = 677.0
+offset_left = 43.0
+offset_top = 67.0
+offset_right = 1371.0
+offset_bottom = 1029.0
 color = Color(0.192157, 0.192157, 0.192157, 0.698039)
+metadata/_edit_use_anchors_ = true
 
 [node name="-------Actors------" type="Node2D" parent="."]
+
+[node name="Draggable" parent="." instance=ExtResource("4_1bvp3")]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1jgguddlgjoe"
-path="res://.godot/imported/school.jpg-26599a6108ccad809ba54d2101ab9994.ctex"
+uid="uid://dsen7qpi1f685"
+path="res://.godot/imported/exit.jpg-0111d5c2c7ec593602522624ffa6197c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stolen Images/school.jpg"
-dest_files=["res://.godot/imported/school.jpg-26599a6108ccad809ba54d2101ab9994.ctex"]
+source_file="res://ArtImport/Stolen Images/exit.jpg"
+dest_files=["res://.godot/imported/exit.jpg-0111d5c2c7ec593602522624ffa6197c.ctex"]
 
 [params]
 

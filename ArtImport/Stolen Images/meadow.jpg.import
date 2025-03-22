@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsen7qpi1f685"
-path="res://.godot/imported/exit.jpg-6ee16ce9ceeb7109e3ebda634e4595d6.ctex"
+uid="uid://evnu0nwdxcx7"
+path="res://.godot/imported/meadow.jpg-cbbd9fa88234937db882fec3e57f13a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stolen Images/exit.jpg"
-dest_files=["res://.godot/imported/exit.jpg-6ee16ce9ceeb7109e3ebda634e4595d6.ctex"]
+source_file="res://ArtImport/Stolen Images/meadow.jpg"
+dest_files=["res://.godot/imported/meadow.jpg-cbbd9fa88234937db882fec3e57f13a2.ctex"]
 
 [params]
 

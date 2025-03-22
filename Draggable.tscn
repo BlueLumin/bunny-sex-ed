@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cycsmo6rxf2ik"]
+
+[ext_resource type="Texture2D" uid="uid://dyodialf27puc" path="res://icon.svg" id="1_5vi0i"]
+[ext_resource type="Script" uid="uid://ds38tjgqs45ym" path="res://DraggableObject.gd" id="2_3qfqe"]
+
+[node name="Draggable" type="Node2D"]
+
+[node name="Object" type="Sprite2D" parent="."]
+position = Vector2(0, -6.10352e-05)
+scale = Vector2(0.221466, 0.231343)
+texture = ExtResource("1_5vi0i")
+script = ExtResource("2_3qfqe")
+
+[node name="Button" type="Button" parent="Object"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -65.0
+offset_right = -65.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Object/Button" to="Object" method="_on_button_button_down"]
+[connection signal="button_up" from="Object/Button" to="Object" method="_on_button_button_up"]

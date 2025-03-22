@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://evnu0nwdxcx7"
-path="res://.godot/imported/meadow.jpg-9a7f42968038d338bbeeb2571e1a117b.ctex"
+uid="uid://c1jgguddlgjoe"
+path="res://.godot/imported/school.jpg-4009043de5533667fb15cb7908c4dc86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stolen Images/meadow.jpg"
-dest_files=["res://.godot/imported/meadow.jpg-9a7f42968038d338bbeeb2571e1a117b.ctex"]
+source_file="res://ArtImport/Stolen Images/school.jpg"
+dest_files=["res://.godot/imported/school.jpg-4009043de5533667fb15cb7908c4dc86.ctex"]
 
 [params]
 
