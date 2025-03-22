@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bofs75nfnbo6l"]
+[gd_scene load_steps=8 format=3 uid="uid://bofs75nfnbo6l"]
 
 [ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://ArtImport/Stolen Images/meadow.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cycsmo6rxf2ik" path="res://Draggable.tscn" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://b3712majr5yt8" path="res://Austen's Hellhole/IndividualBunnyEffects.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dnhn4x8ggscxh" path="res://Austen's Hellhole/FuckingBunnies.tscn" id="6_7mycd"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_7mycd"]
 
 [node name="Main" type="Node2D"]
 
@@ -57,3 +59,6 @@ position = Vector2(116, 133)
 
 [node name="FuckingBunnies" parent="." instance=ExtResource("6_7mycd")]
 position = Vector2(491, 252)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamPlaylist_7mycd")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://b3712majr5yt8"]
+[gd_scene load_steps=91 format=3 uid="uid://b3712majr5yt8"]
 
 [ext_resource type="Script" uid="uid://3y55nkfwlgxh" path="res://Austen's Hellhole/BunnyEffectsController.gd" id="1_cq2ca"]
 [ext_resource type="Texture2D" uid="uid://cfhabt1w4el2e" path="res://ArtImport/BunnyIdle/frame0000.png" id="1_lhnme"]
@@ -50,26 +50,45 @@
 [ext_resource type="AudioStream" uid="uid://d0wru1jjcbrs" path="res://AudioImport/BunnyDrop/sfx_bunny_drop3.mp3" id="25_23rk6"]
 [ext_resource type="AudioStream" uid="uid://c3thqqnb3ohg3" path="res://AudioImport/Interrupt/sfx_bunny_interupt1.mp3" id="30_80cbd"]
 [ext_resource type="Texture2D" uid="uid://4y2xp35ucyq5" path="res://ArtImport/In Heat/frame0000.png" id="31_dv7c6"]
+[ext_resource type="Texture2D" uid="uid://bjek65hthrinx" path="res://ArtImport/School/frame0000.png" id="31_kqnfa"]
 [ext_resource type="AudioStream" uid="uid://0e7kfho3gbmu" path="res://AudioImport/Interrupt/sfx_bunny_interupt2.mp3" id="31_mcgp0"]
+[ext_resource type="Texture2D" uid="uid://ctuws6imqqkwl" path="res://ArtImport/School/frame0001.png" id="32_8gve3"]
 [ext_resource type="AudioStream" uid="uid://cix1wud6mv3kc" path="res://AudioImport/Interrupt/sfx_bunny_interupt3.mp3" id="32_fmg1g"]
 [ext_resource type="Texture2D" uid="uid://k26now5g041c" path="res://ArtImport/In Heat/frame0001.png" id="32_pbkit"]
 [ext_resource type="Texture2D" uid="uid://b07buushf7qgv" path="res://ArtImport/In Heat/frame0002.png" id="33_wfdyg"]
+[ext_resource type="Texture2D" uid="uid://b1emti6e4t2f8" path="res://ArtImport/School/frame0002.png" id="33_x02nv"]
 [ext_resource type="Texture2D" uid="uid://o21cggbhg8w2" path="res://ArtImport/In Heat/frame0003.png" id="34_5yhbn"]
+[ext_resource type="Texture2D" uid="uid://bqjmolr63qc1l" path="res://ArtImport/School/frame0003.png" id="34_pnny7"]
+[ext_resource type="Texture2D" uid="uid://dj8ab8snb1y5c" path="res://ArtImport/School/frame0004.png" id="35_2yvqk"]
 [ext_resource type="Texture2D" uid="uid://mecrx0up6ok2" path="res://ArtImport/In Heat/frame0004.png" id="35_fuhi3"]
 [ext_resource type="Texture2D" uid="uid://slgs30xqrmts" path="res://ArtImport/In Heat/frame0005.png" id="36_tso61"]
+[ext_resource type="Texture2D" uid="uid://cefloqddq0o2q" path="res://ArtImport/School/frame0005.png" id="36_waygj"]
 [ext_resource type="Texture2D" uid="uid://t4qblquncil3" path="res://ArtImport/In Heat/frame0006.png" id="37_fqb2w"]
+[ext_resource type="Texture2D" uid="uid://c8aro8xeijxiy" path="res://ArtImport/School/frame0006.png" id="37_ith3u"]
+[ext_resource type="Texture2D" uid="uid://c6bxbfauojyke" path="res://ArtImport/School/frame0007.png" id="38_11rkv"]
 [ext_resource type="Texture2D" uid="uid://dnaytvvtk6jx2" path="res://ArtImport/In Heat/frame0007.png" id="38_poqc7"]
 [ext_resource type="Texture2D" uid="uid://p3mciep0ep67" path="res://ArtImport/In Heat/frame0008.png" id="39_b8hph"]
+[ext_resource type="Texture2D" uid="uid://brkcqkfjiots3" path="res://ArtImport/School/frame0008.png" id="39_gaac5"]
 [ext_resource type="Texture2D" uid="uid://b2xwuami7sfpf" path="res://ArtImport/In Heat/frame0009.png" id="40_nr5of"]
+[ext_resource type="Texture2D" uid="uid://d2v622703c1bg" path="res://ArtImport/School/frame0009.png" id="40_oqj6y"]
+[ext_resource type="Texture2D" uid="uid://bn1p7wo5u03wq" path="res://ArtImport/School/frame0010.png" id="41_ayy7s"]
 [ext_resource type="Texture2D" uid="uid://fmb2nxkkrjsb" path="res://ArtImport/In Heat/frame0010.png" id="41_hqa3g"]
+[ext_resource type="Texture2D" uid="uid://da0yflr4xq1t0" path="res://ArtImport/School/frame0011.png" id="42_hy4qq"]
 [ext_resource type="Texture2D" uid="uid://b8r3osw7m8oj8" path="res://ArtImport/In Heat/frame0011.png" id="42_qytk8"]
+[ext_resource type="Texture2D" uid="uid://xmtfqcpm0bbp" path="res://ArtImport/School/frame0012.png" id="43_duu2k"]
 [ext_resource type="Texture2D" uid="uid://dmj4s5ad5iw4" path="res://ArtImport/In Heat/frame0012.png" id="43_y43rh"]
+[ext_resource type="Texture2D" uid="uid://7k0bija4fhmy" path="res://ArtImport/School/frame0013.png" id="44_bb2gj"]
 [ext_resource type="Texture2D" uid="uid://3u5iec3tte8d" path="res://ArtImport/In Heat/frame0013.png" id="44_cnk7x"]
+[ext_resource type="Texture2D" uid="uid://bdjyjtvmva7jn" path="res://ArtImport/School/frame0014.png" id="45_2gaq8"]
 [ext_resource type="Texture2D" uid="uid://b1wsmp0urix06" path="res://ArtImport/In Heat/frame0014.png" id="45_ff11h"]
 [ext_resource type="Texture2D" uid="uid://bib31ye2xuy0l" path="res://ArtImport/In Heat/frame0015.png" id="46_3uc4i"]
+[ext_resource type="Texture2D" uid="uid://7ovjwygbvnw5" path="res://ArtImport/School/frame0015.png" id="46_480pl"]
+[ext_resource type="Texture2D" uid="uid://crok77581442h" path="res://ArtImport/School/frame0016.png" id="47_38gvv"]
 [ext_resource type="Texture2D" uid="uid://c1fy6qkhieyj4" path="res://ArtImport/In Heat/frame0016.png" id="47_r27ys"]
+[ext_resource type="Texture2D" uid="uid://bscmeg1lih5cg" path="res://ArtImport/School/frame0017.png" id="48_msbug"]
 [ext_resource type="Texture2D" uid="uid://c2oqxokl315fa" path="res://ArtImport/In Heat/frame0017.png" id="48_mu0ct"]
 [ext_resource type="Texture2D" uid="uid://dp8o1ls5uxaqf" path="res://ArtImport/In Heat/frame0018.png" id="49_djbvy"]
+[ext_resource type="Texture2D" uid="uid://cxdmjt1pku06e" path="res://ArtImport/School/frame0018.png" id="49_jr64e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4llak"]
 animations = [{
@@ -232,10 +251,67 @@ animations = [{
 "name": &"Interrupt",
 "speed": 15.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_kqnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_8gve3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_x02nv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_pnny7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_2yvqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_waygj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ith3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_11rkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_gaac5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_oqj6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_ayy7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hy4qq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_duu2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bb2gj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_2gaq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_480pl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_38gvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_msbug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_jr64e")
+}],
 "loop": true,
 "name": &"Learning",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [],
 "loop": true,
@@ -318,9 +394,7 @@ _interruptAudio = [NodePath("../Audio/Interrupt/BunnyInterruptAudio"), NodePath(
 [node name="AnimationsBunny" type="AnimatedSprite2D" parent="BunnyBody"]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_4llak")
-animation = &"Walking"
-frame = 15
-frame_progress = 0.0620398
+animation = &"Learning"
 
 [node name="Audio" type="Node" parent="."]
 
