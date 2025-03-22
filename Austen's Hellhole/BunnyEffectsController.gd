@@ -19,6 +19,7 @@ func playWalking():
 
 func playFucked():
 	_bunnyAnimations.play("Fucked")
+	bunny_climax_audio_player.play()
 	
 	
 func playSpawn():

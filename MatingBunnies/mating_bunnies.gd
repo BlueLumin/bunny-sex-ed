@@ -17,7 +17,7 @@ func _ready() -> void:
 	interupt_area.mouse_exited.connect(_mouse_exited)
 	
 	progress_bar.value = 0
-	mating_timer.set_wait_time(BunnyManager.mating_time)
+	mating_timer.set_wait_time(BunnyManager.mating_time / 2)
 	mating_timer.start()
 
 
