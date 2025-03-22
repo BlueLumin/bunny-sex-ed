@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://ArtImport/Stolen Images/exit.jpg" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cycsmo6rxf2ik" path="res://Draggable.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://b3712majr5yt8" path="res://Austen's Hellhole/IndividualBunny.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://b3712majr5yt8" path="res://Austen's Hellhole/IndividualBunnyEffects.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://dnhn4x8ggscxh" path="res://Austen's Hellhole/FuckingBunnies.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]

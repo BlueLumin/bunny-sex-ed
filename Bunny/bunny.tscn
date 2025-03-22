@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://23skf4b5omtl"]
 
-[ext_resource type="Script" uid="uid://d4kgyvwi0pi3v" path="res://Bunny/bunny.gd" id="1_5aoni"]
-[ext_resource type="Script" uid="uid://cimyni7r03ehx" path="res://Bunny/drag_drop_component.gd" id="1_vp26t"]
+[ext_resource type="Script" path="res://Bunny/bunny.gd" id="1_5aoni"]
+[ext_resource type="Script" path="res://drag_drop_component.gd" id="1_vp26t"]
 [ext_resource type="Texture2D" uid="uid://mfpgxgws4hdr" path="res://Bunny/Art/bunny.png" id="3_j87if"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j87if"]

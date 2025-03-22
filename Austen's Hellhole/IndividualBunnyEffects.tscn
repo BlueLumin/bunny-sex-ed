@@ -1,0 +1,408 @@
+[gd_scene load_steps=53 format=3 uid="uid://b3712majr5yt8"]
+
+[ext_resource type="Script" uid="uid://3y55nkfwlgxh" path="res://Austen's Hellhole/BunnyEffectsController.gd" id="1_cq2ca"]
+[ext_resource type="Texture2D" uid="uid://cfhabt1w4el2e" path="res://ArtImport/BunnyIdle/frame0000.png" id="1_lhnme"]
+[ext_resource type="Texture2D" uid="uid://bfljkiras3tmv" path="res://ArtImport/post Coital glow/frame0000.png" id="2_qdjtq"]
+[ext_resource type="Texture2D" uid="uid://dpmcpis518e2c" path="res://ArtImport/BunnyIdle/frame0001.png" id="2_w3x3u"]
+[ext_resource type="Texture2D" uid="uid://v213qaree8bw" path="res://ArtImport/BunnyIdle/frame0002.png" id="3_fha5x"]
+[ext_resource type="Texture2D" uid="uid://dbr4leqf6aegg" path="res://ArtImport/post Coital glow/frame0001.png" id="3_xu2nb"]
+[ext_resource type="Texture2D" uid="uid://c7drni0siafs6" path="res://ArtImport/BunnyIdle/frame0003.png" id="4_b828h"]
+[ext_resource type="Texture2D" uid="uid://boi4ioucx063s" path="res://ArtImport/post Coital glow/frame0002.png" id="4_gdim5"]
+[ext_resource type="Texture2D" uid="uid://b20a1ka61qbk2" path="res://ArtImport/BunnyIdle/frame0004.png" id="5_3wtbf"]
+[ext_resource type="Texture2D" uid="uid://b8mj8yfdhbse8" path="res://ArtImport/post Coital glow/frame0003.png" id="5_j4osx"]
+[ext_resource type="Texture2D" uid="uid://f65n8vuay176" path="res://ArtImport/post Coital glow/frame0004.png" id="6_dhy55"]
+[ext_resource type="Texture2D" uid="uid://c5s20ng87hx0e" path="res://ArtImport/BunnyIdle/frame0005.png" id="6_i2jm7"]
+[ext_resource type="Texture2D" uid="uid://b1mm21nx6s3wu" path="res://ArtImport/post Coital glow/frame0005.png" id="7_7x7sf"]
+[ext_resource type="Texture2D" uid="uid://c5xfd15ln6v7u" path="res://ArtImport/BunnyIdle/frame0006.png" id="7_ka2d1"]
+[ext_resource type="Texture2D" uid="uid://rdf7tl3p8ws1" path="res://ArtImport/post Coital glow/frame0006.png" id="8_b4xdb"]
+[ext_resource type="Texture2D" uid="uid://d02o4fskwxnar" path="res://ArtImport/BunnyIdle/frame0007.png" id="8_gmxvr"]
+[ext_resource type="Texture2D" uid="uid://3ywm2fbliejn" path="res://ArtImport/post Coital glow/frame0007.png" id="9_a18t1"]
+[ext_resource type="Texture2D" uid="uid://c84ctrwbyhnog" path="res://ArtImport/BunnyIdle/frame0008.png" id="9_cemlh"]
+[ext_resource type="Texture2D" uid="uid://dnqf05bal6s6y" path="res://ArtImport/post Coital glow/frame0008.png" id="10_23px5"]
+[ext_resource type="Texture2D" uid="uid://deoe5rtlgig4p" path="res://ArtImport/BunnyIdle/frame0009.png" id="10_kwa3e"]
+[ext_resource type="Texture2D" uid="uid://pyehrjp5w501" path="res://ArtImport/post Coital glow/frame0009.png" id="11_t4pwb"]
+[ext_resource type="AudioStream" uid="uid://dhlgdiykmed3c" path="res://AudioImport/Spawn/sfx_bunny_spawn1.mp3" id="12_76pfk"]
+[ext_resource type="AudioStream" uid="uid://cxuqinnfvsvhj" path="res://AudioImport/BunnyClick/sfx_bunny_click1.mp3" id="12_dp5bi"]
+[ext_resource type="Texture2D" uid="uid://cv5knl6s5t3u3" path="res://ArtImport/post Coital glow/frame0010.png" id="12_ogkkg"]
+[ext_resource type="Texture2D" uid="uid://crpf5vxgp1e37" path="res://ArtImport/post Coital glow/frame0011.png" id="13_nk3nk"]
+[ext_resource type="AudioStream" uid="uid://k2kix2gm7my3" path="res://AudioImport/Spawn/sfx_bunny_spawn2.mp3" id="13_ron1t"]
+[ext_resource type="AudioStream" uid="uid://befcbbktu2bpq" path="res://AudioImport/BunnyClick/sfx_bunny_click2.mp3" id="13_scvft"]
+[ext_resource type="AudioStream" uid="uid://nknyjsop26e1" path="res://AudioImport/BunnyClick/sfx_bunny_click3.mp3" id="14_5t1wb"]
+[ext_resource type="Texture2D" uid="uid://beasfmfcb7ly3" path="res://ArtImport/post Coital glow/frame0012.png" id="14_opo1s"]
+[ext_resource type="AudioStream" uid="uid://dju5w04c77hnt" path="res://AudioImport/Spawn/sfx_bunny_spawn3.mp3" id="14_rq1sv"]
+[ext_resource type="Texture2D" uid="uid://bklhnr4jgvb2l" path="res://ArtImport/post Coital glow/frame0013.png" id="15_2poyp"]
+[ext_resource type="AudioStream" uid="uid://by0q0b8uin5i2" path="res://AudioImport/BunnyClick/sfx_bunny_click4.mp3" id="15_80cbd"]
+[ext_resource type="AudioStream" uid="uid://cmvetha5sp27f" path="res://AudioImport/Spawn/sfx_bunny_spawn4.mp3" id="15_y6j7e"]
+[ext_resource type="AudioStream" uid="uid://bohn2obpqk4xf" path="res://AudioImport/BunnyClick/sfx_bunny_click5.mp3" id="16_mcgp0"]
+[ext_resource type="Texture2D" uid="uid://dt0nf1k7vgquu" path="res://ArtImport/post Coital glow/frame0014.png" id="16_mo1ke"]
+[ext_resource type="Texture2D" uid="uid://d1kwt0lvt18hw" path="res://ArtImport/post Coital glow/frame0015.png" id="17_4frv1"]
+[ext_resource type="AudioStream" uid="uid://sj8ubtlskp16" path="res://AudioImport/BunnyClick/sfx_bunny_click6.mp3" id="17_fmg1g"]
+[ext_resource type="Texture2D" uid="uid://cb188th2mp2h7" path="res://ArtImport/post Coital glow/frame0016.png" id="18_0f4lj"]
+[ext_resource type="AudioStream" uid="uid://dckq4uqbgowlo" path="res://AudioImport/BunnyClick/sfx_bunny_click7.mp3" id="18_mk5wm"]
+[ext_resource type="Texture2D" uid="uid://gdewxa8edwlh" path="res://ArtImport/post Coital glow/frame0017.png" id="19_notko"]
+[ext_resource type="AudioStream" uid="uid://0w15bdijtqxc" path="res://AudioImport/BunnyClick/sfx_bunny_click8.mp3" id="19_vgdc0"]
+[ext_resource type="Texture2D" uid="uid://my65lkbujofs" path="res://ArtImport/post Coital glow/frame0018.png" id="20_g83uf"]
+[ext_resource type="AudioStream" uid="uid://bakjdh6r82j7v" path="res://AudioImport/BunnyClick/sfx_bunny_click9.mp3" id="20_nuuwj"]
+[ext_resource type="AudioStream" uid="uid://tbi0f1xtsf11" path="res://AudioImport/BunnyClick/sfx_bunny_click10.mp3" id="21_wc04l"]
+[ext_resource type="AudioStream" uid="uid://cxnxxdpw0awj" path="res://AudioImport/BunnyClick/sfx_bunny_click11.mp3" id="22_y7khb"]
+[ext_resource type="AudioStream" uid="uid://cacq12fj5upqv" path="res://AudioImport/BunnyDrop/sfx_bunny_drop1.mp3" id="23_pa0y6"]
+[ext_resource type="AudioStream" uid="uid://c44u2wvhxraob" path="res://AudioImport/BunnyDrop/sfx_bunny_drop2.mp3" id="24_dlits"]
+[ext_resource type="AudioStream" uid="uid://d0wru1jjcbrs" path="res://AudioImport/BunnyDrop/sfx_bunny_drop3.mp3" id="25_23rk6"]
+[ext_resource type="AudioStream" uid="uid://c3thqqnb3ohg3" path="res://AudioImport/Interrupt/sfx_bunny_interupt1.mp3" id="30_80cbd"]
+[ext_resource type="AudioStream" uid="uid://0e7kfho3gbmu" path="res://AudioImport/Interrupt/sfx_bunny_interupt2.mp3" id="31_mcgp0"]
+[ext_resource type="AudioStream" uid="uid://cix1wud6mv3kc" path="res://AudioImport/Interrupt/sfx_bunny_interupt3.mp3" id="32_fmg1g"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4llak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qdjtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xu2nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gdim5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j4osx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhy55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7x7sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b4xdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a18t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_23px5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t4pwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ogkkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nk3nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_opo1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2poyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mo1ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4frv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0f4lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_notko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_g83uf")
+}],
+"loop": true,
+"name": &"Fucked",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lhnme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w3x3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fha5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_b828h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3wtbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i2jm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ka2d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gmxvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cemlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kwa3e")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qdjtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xu2nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gdim5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j4osx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dhy55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7x7sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b4xdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_a18t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_23px5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_t4pwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ogkkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nk3nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_opo1s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2poyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mo1ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4frv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0f4lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_notko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_g83uf")
+}],
+"loop": true,
+"name": &"Interrupt",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Learning",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Spawn",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[node name="BunnyAnimations" type="Node2D"]
+
+[node name="BunnyBody" type="CharacterBody2D" parent="." node_paths=PackedStringArray("_bunnyAnimations", "_spawnAudio", "_clickedAudio", "_droppedAudio", "_interruptAudio")]
+script = ExtResource("1_cq2ca")
+_bunnyAnimations = NodePath("AnimationsBunny")
+_spawnAudio = [NodePath("../Audio/SpawnAudio/BunnySpawnAudio"), NodePath("../Audio/SpawnAudio/BunnySpawnAudio2"), NodePath("../Audio/SpawnAudio/BunnySpawnAudio3"), NodePath("../Audio/SpawnAudio/BunnySpawnAudio4")]
+_clickedAudio = [NodePath("../Audio/ClickAudio/BunnyClickAudio"), NodePath("../Audio/ClickAudio/BunnyClickAudio2"), NodePath("../Audio/ClickAudio/BunnyClickAudio3"), NodePath("../Audio/ClickAudio/BunnyClickAudio4"), NodePath("../Audio/ClickAudio/BunnyClickAudio5"), NodePath("../Audio/ClickAudio/BunnyClickAudio6"), NodePath("../Audio/ClickAudio/BunnyClickAudio7"), NodePath("../Audio/ClickAudio/BunnyClickAudio8"), NodePath("../Audio/ClickAudio/BunnyClickAudio9"), NodePath("../Audio/ClickAudio/BunnyClickAudio10"), NodePath("../Audio/ClickAudio/BunnyClickAudio11")]
+_droppedAudio = [NodePath("../Audio/DropAudio/BunnyDropAudio"), NodePath("../Audio/DropAudio/BunnyDropAudio2"), NodePath("../Audio/DropAudio/BunnyDropAudio3")]
+_interruptAudio = [NodePath("../Audio/Interrupt/BunnyInterruptAudio"), NodePath("../Audio/Interrupt/BunnyInterruptAudio2"), NodePath("../Audio/Interrupt/BunnyInterruptAudio3")]
+
+[node name="AnimationsBunny" type="AnimatedSprite2D" parent="BunnyBody"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4llak")
+animation = &"Interrupt"
+frame = 13
+frame_progress = 0.722651
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="ClickAudio" type="Node" parent="Audio"]
+
+[node name="BunnyClickAudio" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("12_dp5bi")
+
+[node name="BunnyClickAudio2" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("13_scvft")
+
+[node name="BunnyClickAudio3" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("14_5t1wb")
+
+[node name="BunnyClickAudio4" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("15_80cbd")
+
+[node name="BunnyClickAudio5" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("16_mcgp0")
+
+[node name="BunnyClickAudio6" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("17_fmg1g")
+
+[node name="BunnyClickAudio7" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("18_mk5wm")
+
+[node name="BunnyClickAudio8" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("19_vgdc0")
+
+[node name="BunnyClickAudio9" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("20_nuuwj")
+
+[node name="BunnyClickAudio10" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("21_wc04l")
+
+[node name="BunnyClickAudio11" type="AudioStreamPlayer2D" parent="Audio/ClickAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("22_y7khb")
+
+[node name="DropAudio" type="Node" parent="Audio"]
+
+[node name="BunnyDropAudio" type="AudioStreamPlayer2D" parent="Audio/DropAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("23_pa0y6")
+
+[node name="BunnyDropAudio2" type="AudioStreamPlayer2D" parent="Audio/DropAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("24_dlits")
+
+[node name="BunnyDropAudio3" type="AudioStreamPlayer2D" parent="Audio/DropAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("25_23rk6")
+
+[node name="SpawnAudio" type="Node" parent="Audio"]
+
+[node name="BunnySpawnAudio" type="AudioStreamPlayer2D" parent="Audio/SpawnAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("12_76pfk")
+
+[node name="BunnySpawnAudio2" type="AudioStreamPlayer2D" parent="Audio/SpawnAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("13_ron1t")
+
+[node name="BunnySpawnAudio3" type="AudioStreamPlayer2D" parent="Audio/SpawnAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("14_rq1sv")
+
+[node name="BunnySpawnAudio4" type="AudioStreamPlayer2D" parent="Audio/SpawnAudio"]
+scale = Vector2(2, 2)
+stream = ExtResource("15_y6j7e")
+
+[node name="Interrupt" type="Node" parent="Audio"]
+
+[node name="BunnyInterruptAudio" type="AudioStreamPlayer2D" parent="Audio/Interrupt"]
+scale = Vector2(2, 2)
+stream = ExtResource("30_80cbd")
+
+[node name="BunnyInterruptAudio2" type="AudioStreamPlayer2D" parent="Audio/Interrupt"]
+scale = Vector2(2, 2)
+stream = ExtResource("31_mcgp0")
+
+[node name="BunnyInterruptAudio3" type="AudioStreamPlayer2D" parent="Audio/Interrupt"]
+scale = Vector2(2, 2)
+stream = ExtResource("32_fmg1g")
+
+[node name="TestButtons" type="Node" parent="."]
+
+[node name="Spawn" type="Button" parent="TestButtons"]
+offset_left = 4.0
+offset_top = 44.0
+offset_right = 64.0
+offset_bottom = 75.0
+text = "Spawn"
+
+[node name="Learning" type="Button" parent="TestButtons"]
+offset_left = 4.0
+offset_top = 162.0
+offset_right = 80.0
+offset_bottom = 193.0
+text = "Learning"
+
+[node name="Fucked" type="Button" parent="TestButtons"]
+offset_left = 6.0
+offset_top = 125.0
+offset_right = 69.0
+offset_bottom = 156.0
+text = "Fucked"
+
+[node name="Walking" type="Button" parent="TestButtons"]
+offset_left = 4.0
+offset_top = 85.0
+offset_right = 74.0
+offset_bottom = 116.0
+text = "Walking"
+
+[node name="Idle" type="Button" parent="TestButtons"]
+offset_left = 6.0
+offset_top = 202.0
+offset_right = 43.0
+offset_bottom = 233.0
+text = "Idle"
+
+[node name="Pickup" type="Button" parent="TestButtons"]
+offset_left = 11.0
+offset_top = 331.0
+offset_right = 48.0
+offset_bottom = 362.0
+text = "Pickup"
+
+[node name="Drop" type="Button" parent="TestButtons"]
+offset_left = 8.0
+offset_top = 292.0
+offset_right = 45.0
+offset_bottom = 323.0
+text = "Drop"
+
+[node name="Interrupt" type="Button" parent="TestButtons"]
+offset_left = 6.0
+offset_top = 247.0
+offset_right = 43.0
+offset_bottom = 278.0
+text = "Interrupt"
+
+[connection signal="pressed" from="TestButtons/Spawn" to="BunnyBody" method="playSpawn"]
+[connection signal="pressed" from="TestButtons/Learning" to="BunnyBody" method="playLearning"]
+[connection signal="pressed" from="TestButtons/Fucked" to="BunnyBody" method="playFucked"]
+[connection signal="pressed" from="TestButtons/Walking" to="BunnyBody" method="playWalking"]
+[connection signal="pressed" from="TestButtons/Idle" to="BunnyBody" method="playIdle"]
+[connection signal="pressed" from="TestButtons/Pickup" to="BunnyBody" method="playClicked"]
+[connection signal="pressed" from="TestButtons/Drop" to="BunnyBody" method="playDropped"]
+[connection signal="pressed" from="TestButtons/Interrupt" to="BunnyBody" method="playInterrupt"]
