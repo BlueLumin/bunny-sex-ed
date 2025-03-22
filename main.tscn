@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bofs75nfnbo6l"]
+[gd_scene load_steps=7 format=3 uid="uid://bofs75nfnbo6l"]
 
 [ext_resource type="Texture2D" uid="uid://evnu0nwdxcx7" path="res://ArtImport/Stolen Images/meadow.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c1jgguddlgjoe" path="res://ArtImport/Stolen Images/school.jpg" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dsen7qpi1f685" path="res://ArtImport/Stolen Images/exit.jpg" id="3_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cycsmo6rxf2ik" path="res://Draggable.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b3712majr5yt8" path="res://Austen's Hellhole/IndividualBunny.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dnhn4x8ggscxh" path="res://Austen's Hellhole/FuckingBunnies.tscn" id="6_7mycd"]
 
 [node name="Main" type="Node2D"]
 
@@ -49,3 +51,9 @@ metadata/_edit_use_anchors_ = true
 [node name="-------Actors------" type="Node2D" parent="."]
 
 [node name="Draggable" parent="." instance=ExtResource("4_1bvp3")]
+
+[node name="BunnyAnimations" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(116, 133)
+
+[node name="FuckingBunnies" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(491, 252)
