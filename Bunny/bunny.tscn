@@ -1,13 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://23skf4b5omtl"]
+[gd_scene load_steps=5 format=3 uid="uid://23skf4b5omtl"]
 
-[ext_resource type="Script" uid="uid://cimyni7r03ehx" path="res://drag_drop_component.gd" id="1_vp26t"]
+[ext_resource type="Script" uid="uid://d4kgyvwi0pi3v" path="res://Bunny/bunny.gd" id="1_5aoni"]
+[ext_resource type="Script" uid="uid://cimyni7r03ehx" path="res://Bunny/drag_drop_component.gd" id="1_vp26t"]
+[ext_resource type="Texture2D" uid="uid://mfpgxgws4hdr" path="res://Bunny/Art/bunny.png" id="3_j87if"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3lx8c"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_j87if"]
+radius = 57.16
 
-[node name="Bunny" type="Node2D"]
+[node name="Bunny" type="CharacterBody2D" node_paths=PackedStringArray("cooldown_timer", "mating_area") groups=["bunny"]]
+script = ExtResource("1_5aoni")
+cooldown_timer = NodePath("CooldownTimer")
+mating_area = NodePath("MatingArea")
 
-[node name="BunnyAnimatedSprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_3lx8c")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_j87if")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="DragDropComponent" type="Node2D" parent="."]
 script = ExtResource("1_vp26t")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="MatingArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MatingArea"]
+shape = SubResource("CircleShape2D_j87if")

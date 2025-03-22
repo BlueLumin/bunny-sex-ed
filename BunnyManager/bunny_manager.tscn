@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bghehrkneguim"]
+
+[ext_resource type="Script" uid="uid://efvlk3id82v4" path="res://BunnyManager/bunny_manager.gd" id="1_2kjb2"]
+
+[node name="BunnyManager" type="Node2D" groups=["bunny_manager"]]
+script = ExtResource("1_2kjb2")
